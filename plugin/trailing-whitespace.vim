@@ -28,5 +28,6 @@ function! s:FixWhitespace(line1,line2)
 endfunction
 
 " Run :FixWhitespace to remove end of line white space
+command! -range=% Fws call <SID>FixWhitespace(<line1>,<line2>)
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
-command! -range=% Fixwhitespace call <SID>FixWhitespace(<line1>,<line2>)
+
